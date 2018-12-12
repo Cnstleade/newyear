@@ -1,0 +1,54 @@
+.yaoyiyao {
+  text-align: center;
+}
+
+.yaoyiyao image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.main {
+  width: 100%;
+  height: 1372rpx;
+  background-image: url('http://cdn.jd.tiqianfu.com/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sign {
+  position: relative;
+  padding-top: 800rpx;
+  padding-left: 80rpx;
+  border-radius: 50%;
+}
+
+.sign-text {
+  position: absolute;
+  top: 915rpx;
+  left: 300rpx;
+  color: #fff;
+  font-weight: bold;
+}
+
+.sign .img {
+  width: 510rpx;
+  height: 320rpx;
+  border-radius: 100rpx;
+}
+
+.countDown {
+  text-align: center;
+  padding-top: 100rpx;
+}
+
+.yaoba{
+  display: inline-block;
+ 
+  margin-top: 100rpx;
+  font-size: 40rpx;
+  line-height: 60rpx;
+}

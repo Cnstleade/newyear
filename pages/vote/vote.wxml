@@ -1,0 +1,17 @@
+<!--pages/vote/vote.wxml-->
+<view wx:if="{{num==0}}" class="vote">
+  谢谢您的投票
+</view>
+<view wx:else>
+  <view class="vote">
+    <text>您还有{{num}}票</text>请投给您喜欢的节目吧
+  </view>
+  <checkbox-group bindchange="checkboxChange" class="check">
+    <label class="checkbox" wx:for="{{items}}">
+      <checkbox disabled="{{item.diasbled}}" value="{{item.id}}" checked="{{item.checked}}" />{{item.name}}
+    </label>
+  </checkbox-group>
+  <view class="sub">
+    <button type="primary" catchtap='vote'>投票</button>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<!--pages/xyx/xyx.wxml-->
+<view wx:if="{{start==4}}" class="yaoyiyao">
+  <text class="yaoba" style="color:red">{{score}}</text>
+</view>
+<view wx:if="{{start==3}}" class="yaoyiyao">
+  <text class="yaoba">摇吧{{countDownNums}}</text>s
+  <image animation="{{animationData}}" class="{{isChecked?'is_checked':'normal'}}" src="/images/bg.jpg" mode="aspectFit"></image>
+</view>
+<view wx:elif="{{start==2}}">
+  <view class='countDown'>倒计时：
+    <text style='color:red'>{{countDownNum}}</text>s
+  </view>
+</view>
+<view wx:elif="{{start==1}}" class="main">
+  <view class="sign">
+    <image src="/images/logo2.png" class="img"></image>
+    <text  class="sign-text">准备</text>
+  </view>
+</view>

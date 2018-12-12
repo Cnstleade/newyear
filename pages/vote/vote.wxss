@@ -1,0 +1,22 @@
+/* pages/vote/vote.wxss */
+
+.check {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30rpx;
+}
+
+.check label {
+  margin: 20rpx 0;
+}
+
+.sub {
+  padding: 20rpx;
+}
+
+.vote {
+  color: red;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  text-align: center;
+}

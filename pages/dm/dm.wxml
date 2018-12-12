@@ -1,0 +1,54 @@
+<!--pages/dm/dm.wxml-->
+<view class="main">
+  <view class="card">
+    <view class="section">
+      <scroll-view scroll-y style="height:800rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+        <view wx:for="{{showData}}">
+          <view class="dmArea">
+            <view class="dmArea-top">
+              <image src='{{item.avatarUrl}}'></image>
+              <text class="name">{{item.nickName}}</text>
+              <text class="time">{{item.time}}</text>
+            </view>
+            <view class="dmArea-title">
+              <text>{{item.data}}</text>
+              <image wx:if="{{item.imgUrl}}" mode="aspectFit" src="{{item.imgUrl}}" catchtap='showDataIms' data-src="{{item.imgUrl}}"></image>
+            </view>
+          </view>
+
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="question-input-area">
+    <view class="question-title-wrap">
+      <!-- 标题输入框 -->
+      <input class="question-title" value='{{title}}' type="text" placeholder="请输入弹幕" maxlength="40" 
+      style="color:{{color}}"
+      placeholder-style="color:#b3b3b3;font-size:18px;" bindinput="handleTitleInput"></input>
+      <!-- 标题输入字数统计 -->
+    </view>
+    <!-- <view class="question-image">
+      <block wx:if="{{imgUrl==null}}">
+        <button type="default" type="primary" size="mini" bindtap="uploadFile">添加图片</button>
+      </block>
+      <block wx:else>
+        <button type="default" type="primary" size="mini" bindtap="uploadFile">更换图片</button>
+      </block>
+
+      <view class="title-input-counter">{{titleCount}}/40</view>
+    </view> -->
+  </view>
+  <!-- <view class="tishi">*请等图片加载出来再点发送暂不支持gif图片</view> -->
+  <button class="weui-btn" type="primary" bindtap="submitForm">发送</button>
+  <!-- <view class="imgView">
+    <image wx:if="{{imgUrl}}" src="{{imgUrl}}" mode="aspectFit"></image>
+  </view> -->
+  <view style="display:flex;margin-top:30px">
+
+    <block wx:for="{{colorArray}}" wx:key="" wx:for-item="Color">
+      <button class="btn"  type="default" style="background:{{Color}};"  bindtap="bindtap{{index}}"></button>
+    </block>
+
+  </view>
+</view>
